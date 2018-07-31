@@ -1,5 +1,4 @@
 const request = require("request");
-const oauth2 = require("simple-oauth2");
 const cors = require("cors");
 
 const config = {
@@ -52,7 +51,7 @@ const handler = function(event, context, callback) {
 };
 
 const resourceOwner = function doResourceOwnerFlow(cred, res) {
-  const auth = oauth2.create({
+  const auth = require("simple-oauth2").create({
     // use config above
     client: {
       id: config.CLIENT_ID,
