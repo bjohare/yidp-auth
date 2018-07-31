@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 require("./app/routes")(app, {});
 
-const port = 8000;
+const port = 8001;
 
 app.listen(port, () => {
   console.log("Auth server listening on port: " + port);
